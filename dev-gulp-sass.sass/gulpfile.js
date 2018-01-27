@@ -5,8 +5,8 @@ var reload      = browserSync.reload;
 const autoprefixer = require('gulp-autoprefixer');
 
 var src = {
-    scss: 'app/scss/*.scss',
-    css:  'app/css',
+    scss: 'app/*.scss',
+    css:  'app/',
     html: 'app/*.html'
 };
 
