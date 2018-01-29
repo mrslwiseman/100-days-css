@@ -1,0 +1,169 @@
+html,
+body {
+  height: 100%;
+  width: 100%; }
+
+body {
+  background-color: #fff; }
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.flex-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.container {
+  background-color: #252B39;
+  -webkit-box-shadow: 2px 3px 10px 3px rgba(160, 160, 160, 0.35);
+  box-shadow: 2px 3px 10px 3px rgba(160, 160, 160, 0.35);
+  height: 400px;
+  width: 400px; }
+
+@-webkit-keyframes animateSun {
+  from {
+    -webkit-transform: rotate(-80deg);
+    transform: rotate(-80deg); }
+  to {
+    -webkit-transform: rotate(85deg);
+    transform: rotate(85deg); } }
+
+@keyframes animateSun {
+  from {
+    -webkit-transform: rotate(-80deg);
+    transform: rotate(-80deg); }
+  to {
+    -webkit-transform: rotate(85deg);
+    transform: rotate(85deg); } }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  15% {
+    opacity: 1; }
+  85% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  15% {
+    opacity: 1; }
+  85% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.circle {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(68%, #7CDFFC), color-stop(68%, #F0DE75));
+  background-image: linear-gradient(-180deg, #7CDFFC 68%, #F0DE75 68%);
+  -webkit-box-shadow: 0 3px 11px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 11px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  height: 50%;
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-animation: fadeIn 5s infinite;
+  animation: fadeIn 5s infinite; }
+  .circle:before {
+    display: block;
+    content: "";
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: yellow;
+    position: absolute;
+    top: 20px;
+    -webkit-transform-origin: 20px 250px;
+    transform-origin: 10px 150px;
+    -webkit-animation: animateSun 5s infinite both cubic-bezier(0, 0.26, 1, 0.62);
+    animation: animateSun 5s infinite both cubic-bezier(0, 0.26, 1, 0.62); }
+  .circle:after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 0;
+    border-top: 55px solid #D3C055;
+    border-left: 55px solid transparent;
+    border-right: 55px solid transparent;
+    margin: 0 auto;
+    height: 0;
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    top: 68%;
+    -webkit-animation: pyramidGroundShadow 5s infinite both cubic-bezier(0.71, 0.01, 0.34, 0.99);
+    animation: pyramidGroundShadow 5s infinite both cubic-bezier(0.71, 0.01, 0.34, 0.99); }
+
+@-webkit-keyframes pyramidFaceShadows {
+  20% {
+    background-image: linear-gradient(-127deg, #ABABAB 58%, #E7E7E7 58%); }
+  40% {
+    background-image: linear-gradient(-127deg, #CDCDCD 58%, #E7E7E7 58%); }
+  60% {
+    background-image: linear-gradient(-127deg, #CDCDCD 58%, #CDCDCD 58%); }
+  80% {
+    background-image: linear-gradient(-127deg, #E7E7E7 58%, #CDCDCD 58%); }
+  100% {
+    background-image: linear-gradient(-127deg, #E7E7E7 58%, #ABABAB 58%); } }
+
+@keyframes pyramidFaceShadows {
+  20% {
+    background-image: linear-gradient(-127deg, #ABABAB 58%, #E7E7E7 58%); }
+  40% {
+    background-image: linear-gradient(-127deg, #CDCDCD 58%, #E7E7E7 58%); }
+  60% {
+    background-image: linear-gradient(-127deg, #CDCDCD 58%, #CDCDCD 58%); }
+  80% {
+    background-image: linear-gradient(-127deg, #E7E7E7 58%, #CDCDCD 58%); }
+  100% {
+    background-image: linear-gradient(-127deg, #E7E7E7 58%, #ABABAB 58%); } }
+
+@-webkit-keyframes pyramidGroundShadow {
+  0% {
+    -webkit-transform: skew(90deg);
+    transform: skew(90deg); }
+  100% {
+    -webkit-transform: skew(-90deg);
+    transform: skew(-90deg); } }
+
+@keyframes pyramidGroundShadow {
+  0% {
+    -webkit-transform: skew(90deg);
+    transform: skew(90deg); }
+  100% {
+    -webkit-transform: skew(-90deg);
+    transform: skew(-90deg); } }
+  .circle .pyramid {
+    height: 60%;
+    width: 60%;
+    position: relative;
+    overflow: hidden;
+    bottom: -8%;
+    margin: 0 auto; }
+    .circle .pyramid:before {
+      background-image: linear-gradient(-127deg, #E7E7E7 58%, #ABABAB 58%);
+      display: block;
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 75%;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      -webkit-animation: pyramidFaceShadows 5s infinite;
+      animation: pyramidFaceShadows 5s infinite; }
