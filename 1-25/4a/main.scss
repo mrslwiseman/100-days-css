@@ -1,0 +1,61 @@
+$textColor: #fff;
+$bgColor: #252B39;
+$bgGradientColor1: #4cc291;
+$bgGradientColor2: rgb(42, 200, 211);
+$frameSize: 400px;
+
+html, 
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: $textColor;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: $bgColor;
+    box-shadow: 2px 3px 10px 3px rgba(160, 160, 160, 0.35);
+    height: $frameSize;
+    width: $frameSize;
+    overflow: hidden;
+    position: relative;
+}
+
+.loader {
+    position: relative;
+    align-items: center;
+}
+
+.bar {
+    height: 60px;
+    width: 20px;
+    background-color: #3B3B27;
+    animation-fill-mode: both;
+    animation: grow 1000ms infinite cubic-bezier(0.18, 0.89, 0.32, 1.28) ;
+    margin: 2px;
+}
+
+@keyframes grow {
+    0%, 50% {
+        transform: scaleY(1);
+    } 30% {
+        transform: scaleY(2);
+    } 
+}
+
+@for $i from 1 through 5 {
+    .loader-bar-#{$i} {
+        animation-delay: $i * 80ms;
+    }
+}

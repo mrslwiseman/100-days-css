@@ -1,0 +1,142 @@
+html,
+body {
+  height: 100%;
+  width: 100%; }
+
+body {
+  background-color: #fff; }
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.flex-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.container {
+  background-color: #252B39;
+  -webkit-box-shadow: 2px 3px 10px 3px rgba(160, 160, 160, 0.35);
+  box-shadow: 2px 3px 10px 3px rgba(160, 160, 160, 0.35);
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+  position: relative; }
+
+@-webkit-keyframes swellOuter {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  90%, 100% {
+    -webkit-box-shadow: 1px 2px 10px 2px rgba(19, 19, 19, 0.25);
+    box-shadow: 1px 2px 10px 2px rgba(19, 19, 19, 0.25);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; } }
+
+@keyframes swellOuter {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  90%, 100% {
+    -webkit-box-shadow: 1px 2px 10px 2px rgba(19, 19, 19, 0.25);
+    box-shadow: 1px 2px 10px 2px rgba(19, 19, 19, 0.25);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; } }
+
+@-webkit-keyframes swellMiddle {
+  0%, 40% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0; }
+  80%, 100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-box-shadow: 1px 2px 10px 2px rgba(19, 19, 19, 0.25);
+    box-shadow: 1px 2px 10px 2px rgba(19, 19, 19, 0.25); } }
+
+@keyframes swellMiddle {
+  0%, 40% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0; }
+  80%, 100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-box-shadow: 1px 2px 10px 2px rgba(19, 19, 19, 0.25);
+    box-shadow: 1px 2px 10px 2px rgba(19, 19, 19, 0.25); } }
+
+@-webkit-keyframes swellInner {
+  0%, 75% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-box-shadow: 1px 2px 10px 2px rgba(19, 19, 19, 0.25);
+    box-shadow: 1px 2px 10px 2px rgba(19, 19, 19, 0.25); } }
+
+@keyframes swellInner {
+  0%, 75% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-box-shadow: 1px 2px 10px 2px rgba(19, 19, 19, 0.25);
+    box-shadow: 1px 2px 10px 2px rgba(19, 19, 19, 0.25); } }
+
+.circle-container {
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: pulse 1s ease-in-out infinite alternate;
+  animation: pulse 1s ease-in-out infinite alternate; }
+  .circle-container .circle {
+    position: absolute;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 1px 10px 0px rgba(150, 150, 150, 0.5);
+    box-shadow: 0px 1px 10px 0px rgba(150, 150, 150, 0.5); }
+
+.circle__outer {
+  background-color: #D20886;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: swellOuter 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+  animation: swellOuter 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+  z-index: 1;
+  height: 200px;
+  width: 200px; }
+
+.circle__middle {
+  background-color: #E14FAA;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: swellMiddle 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+  animation: swellMiddle 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+  z-index: 2;
+  height: 150px;
+  width: 150px; }
+
+.circle__inner {
+  background-color: #F183C8;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: swellInner 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+  animation: swellInner 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+  z-index: 3;
+  height: 100px;
+  width: 100px; }

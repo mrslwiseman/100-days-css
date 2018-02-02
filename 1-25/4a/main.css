@@ -1,0 +1,81 @@
+html,
+body {
+  height: 100%;
+  width: 100%; }
+
+body {
+  background-color: #fff; }
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.flex-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.container {
+  background-color: #252B39;
+  -webkit-box-shadow: 2px 3px 10px 3px rgba(160, 160, 160, 0.35);
+  box-shadow: 2px 3px 10px 3px rgba(160, 160, 160, 0.35);
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+  position: relative; }
+
+.loader {
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.bar {
+  height: 60px;
+  width: 20px;
+  background-color: #3B3B27;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: grow 1000ms infinite cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  animation: grow 1000ms infinite cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  margin: 2px; }
+
+@-webkit-keyframes grow {
+  0%, 50% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1); }
+  30% {
+    -webkit-transform: scaleY(2);
+    transform: scaleY(2); } }
+
+@keyframes grow {
+  0%, 50% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1); }
+  30% {
+    -webkit-transform: scaleY(2);
+    transform: scaleY(2); } }
+
+.loader-bar-1 {
+  -webkit-animation-delay: 80ms;
+  animation-delay: 80ms; }
+
+.loader-bar-2 {
+  -webkit-animation-delay: 160ms;
+  animation-delay: 160ms; }
+
+.loader-bar-3 {
+  -webkit-animation-delay: 240ms;
+  animation-delay: 240ms; }
+
+.loader-bar-4 {
+  -webkit-animation-delay: 320ms;
+  animation-delay: 320ms; }
+
+.loader-bar-5 {
+  -webkit-animation-delay: 400ms;
+  animation-delay: 400ms; }
