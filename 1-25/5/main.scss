@@ -1,0 +1,139 @@
+@import "normalize";
+
+* {
+    box-sizing: border-box;
+}
+
+h3 {
+    margin: 0;
+}
+p {
+    margin: 0;
+
+}
+
+
+$textColor: #fff;
+$bgColor: #252B39;
+$bgGradientColor1: #4cc291;
+$bgGradientColor2: rgb(42, 200, 211);
+$frameHeight: 600px;
+$frameWidth: 700px;
+
+html, 
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: $textColor;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: $bgColor;
+    box-shadow: 2px 3px 10px 3px rgba(160, 160, 160, 0.35);
+    height: $frameHeight;
+    width: $frameWidth;
+    overflow: hidden;
+    position: relative;
+}
+
+$key-color: (
+    views:red,
+    purchases: #5D86E1
+);
+
+@each $key, $value in $key-color {
+    .#{$key} {
+        &:before {
+            display: inline-block;
+            width: 15px;
+            height: 5px;
+            border-radius: 5px;
+            content: "";
+            background-color: $value;
+            margin: 0 10px 2px 0;
+        }
+    }
+}
+
+.card {
+    box-shadow: 2px 3px 10px 3px rgba(0, 0, 0, 0.35);
+    
+    font-weight: 100;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 450px;
+    padding: 20px;
+    color: #212121;
+    border-radius: 5px;
+    overflow: hidden;
+    header {
+        margin: -20px -20px 20px -20px;
+        display: flex;
+        flex-basis: 30%;
+        flex-grow:1;
+        justify-content: space-between;
+        background-color: #FFCF15;
+        padding: 20px 20px 20px;
+        color: white;
+        .card__title h3 {
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+        .card__revenue {
+            text-align: right;
+            .card__revenue-total {
+                font-size: 1.5em;
+            }
+        }
+    }
+    section {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 2;
+        flex-basis: 70%;
+        justify-content: center;
+        align-items: stretch;
+
+        .card__chart-key {
+            display: flex;
+            justify-content: flex-end;
+            span {
+                font-size: .9em;
+                margin-left: 20px;
+            }
+        }
+        .card__chart {
+            text-align: center;
+            flex-grow:2;
+            border: 1px solid white;
+        }
+        .card__days {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0 0;
+            
+        }
+        .card__day {
+            font-size: .9em;
+            width: 60px;
+            text-align: center;
+        }
+    }
+
+    
+}
+

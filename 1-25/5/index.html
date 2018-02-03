@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>100 Days of SCSS</title>
+    <!-- https://100dayscss.com/ -->
+    <link rel='stylesheet' href='main.css'>
+</head>
+
+<body class="flex flex-center">
+
+    <div class="container flex flex-center">
+       
+        <article class="card">
+            <header>
+                <div class="card__title">
+                    <h3>Weekly Report</h3>
+                    <p>01. Feb - 07. Feb</p>
+                </div>
+                <div class="card__revenue">
+                    <p>Revenue</p>
+                    <p class="card__revenue-total">$3621.79</p>
+                </div>
+            </header>
+            <section>
+                <div class="card__chart-key">
+                    <span class="views">Views</span>
+                    <span class="purchases">Purchases</span>
+                </div>
+                <div class="card__chart">
+                    <svg width="420" height="150" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 50 L420 50" stroke="#F1F1F1" stroke-width="1"/>
+                        <path d="M0 100 L420 100" stroke="#F1F1F1" stroke-width="1"/>
+                        <path d="M0 150 L420 150" stroke="#F1F1F1" stroke-width="1"/>
+                        <!-- Purchases -->
+                        <path d="M30 100 L90 80 L150 85 L210 110 L270 100 L330 80 L390 70" stroke="#5D86E1" stroke-width="3" fill="none"/>
+                        <circle cx="30" cy="100" r="4" fill="#5D86E1"/>
+                        <circle cx="90" cy="80" r="4" fill="#5D86E1"/>
+                        <circle cx="150" cy="85" r="4" fill="#5D86E1"/>
+                        <circle cx="210" cy="110" r="4" fill="#5D86E1"/>
+                        <circle cx="270" cy="100" r="4" fill="#5D86E1"/>
+                        <circle cx="330" cy="80" r="4" fill="#5D86E1"/>
+                        <circle cx="390" cy="70" r="4" fill="#5D86E1"/>
+                        <!-- Views -->
+                        <path d="M30 130 L90 110 L150 110 L210 140 L270 120 L330 110 L390 110" stroke="red" stroke-width="3" fill="none"/>
+                        <circle cx="30" cy="130" r="4" fill="red"/>
+                        <circle cx="90" cy="110" r="4" fill="red"/>
+                        <circle cx="150" cy="110" r="4" fill="red"/>
+                        <circle cx="210" cy="140" r="4" fill="red"/>
+                        <circle cx="270" cy="120" r="4" fill="red"/>
+                        <circle cx="330" cy="110" r="4" fill="red"/>
+                        <circle cx="390" cy="110" r="4" fill="red"/>
+                        
+                      
+                      </svg>
+                </div>
+                <footer>
+                    <div class="card__days">
+                        <div class="card__day">Mon</div>
+                        <div class="card__day">Tue</div>
+                        <div class="card__day">Wed</div>
+                        <div class="card__day">Thu</div>
+                        <div class="card__day">Fri</div>
+                        <div class="card__day">Sat</div>
+                        <div class="card__day">Sun</div>
+                    </div>
+                </footer>
+            </section>
+            
+        </article>
+
+    </div>
+
+
+</body>
+<script>
+   
+</script>
+</html>
