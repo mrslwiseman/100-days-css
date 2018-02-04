@@ -1,0 +1,189 @@
+@import "normalize";
+@import 'https://fonts.googleapis.com/css?family=Assistant:300,400,600';
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+$textColor: #635459;
+$bgColor: #252B39;
+$frameHeight: 600px;
+$frameWidth: 700px;
+
+html, 
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: $textColor;
+    font-family: 'Assistant', sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-image: linear-gradient(-135deg, #FFB1C8 0%, #D2FEFF 100%);
+    box-shadow: 2px 3px 10px 3px rgba(4, 4, 4, 0.35);
+    height: $frameHeight;
+    width: $frameWidth;
+    overflow: hidden;
+    position: relative;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 3px 10px 3px rgba(133, 133, 133, 0.15);
+    color: $textColor;
+    display: flex;
+    font-weight: 100;
+    height: 375px;
+    overflow: hidden;
+    width: 450px;
+
+
+    .card__name {
+        margin: 25px 0;
+
+        h2 {
+            font-size: 1.2em;
+            letter-spacing: 2px;
+            margin-top: 15px;
+            margin-bottom: .2em;
+            text-transform: uppercase;
+        }
+
+        .card__pic {
+            align-items: center;
+            display: flex;
+            height: 130px;
+            justify-content: center;
+            position: relative;
+            
+            &:hover {
+                &:before {
+                    transform: rotate(180deg);
+                }
+                &:after {
+                    transform: rotate(0deg);
+                    
+                }
+            }
+            &:before {
+                border-radius: 50%;
+                border-bottom: 1px solid #FFB2C9;
+                border-left: 1px solid transparent;
+                border-top: 1px solid #FFB2C9;
+                border-right: 1px solid #FFB2C9;
+                content: "";
+                display: block;
+                height: 115px;
+                position: absolute;
+                transition: all 1s ease;
+                width: 115px;
+            }
+            &:after {
+                border-top: 1px solid #FFB2C9;
+                border-right: 1px solid #FFB2C9;
+                border-bottom: 1px solid #FFB2C9;
+                border-left: 1px solid transparent;
+                border-radius: 50%;
+                content: "";
+                display: block;
+                height: 130px;
+                position: absolute;
+                transition: all 1s ease;
+                top: 0;
+                width: 130px;
+                transform: rotate(180deg);
+            }
+            img {
+               border-radius: 50%;
+            }
+        }
+ 
+    }
+
+    .card__buttons {
+        flex-basis: 35%;
+        
+    }
+    .card__details {
+        align-items: center;
+        display: flex;
+        flex-basis: 30%;
+        flex-grow: 2;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        button {
+            background: none;
+            border: 1px solid #C3C3C3;
+            border-radius: 20px;
+            cursor: pointer;
+            display: block;
+            margin: 10px;
+            padding: 10px 10px;
+            transition: all 500ms ease;
+            width: 150px;
+            &:hover {
+                background-color: #FFB2C9;
+            }
+        }
+    }
+    .card__stats {
+        flex-grow: 1;
+        background-image: linear-gradient(134deg, #FFFFFF 0%, #FFDCE7 100%);        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        .card__stat {
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column-reverse;
+            flex-grow: 1;
+            justify-content: center;
+            transition: all 500ms ease-in-out;
+            &:hover {
+                background-color: #F0DBE1;
+            }
+            h4 {
+                font-weight: 400;
+                letter-spacing: 1.6;
+                margin: 0;
+            }
+            p {
+                font-size: 1.6em;
+                font-weight: 700;
+                margin: 0;
+            }
+            &:nth-child(1n+2){
+                position: relative;
+                &:after {
+                    background-color: #FFB2C9;
+                    display: block;
+                    content: "";
+                    height: 1px;
+                    position: absolute;
+                    top: 0;
+                    width: 60%;
+                }
+            }
+
+        }
+    }
+}
+
