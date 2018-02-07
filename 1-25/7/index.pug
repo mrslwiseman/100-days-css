@@ -1,0 +1,37 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel='stylesheet' href='main.css')
+        title 100 Days of CSS 
+        //- 100dayscss.com
+    body
+        .container
+            .card-container
+                .drawer
+                    -
+                        var drawer = ['Dashboard', 'Profile', 'Notifications', 'Messages', 'Settings']
+                    each item in drawer
+                        .drawer__item
+                            p #{item}
+                article.card
+                    header.nav
+                        .nav__menu.open
+                            .line-1
+                            .line-2
+                            .line-3
+                        h2.nav__title Notifications
+                        .nav__logo
+                    .list
+                        - 
+                            var notifications = [['John Walker', '9.24AM', 'posted a photo on your wall.'], ['Alice Parker', '8.19AM', 'commented on your last post.'], ['Luke Wayne', 'Yesterday', 'added you as a friend.']]
+                        each item in notifications
+                            .list-item
+                                .list-item__date #{item[1]}
+                                p.list-item__text #[strong #{item[0]}] #{item[2]}
+                            
+    script(src="main.js", type="text/javascript")
+    
+
+

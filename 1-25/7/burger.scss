@@ -1,0 +1,82 @@
+$height: 20px;
+$width: 40px;
+$lineHeight:3px;
+$animationDuration: 250ms;
+.open {
+    &.nav__menu {
+        height: $lineHeight;
+        transition: height $animationDuration ease-in-out 0ms;
+
+        .line-2 {
+            width: 0;
+            visibility: hidden;
+            transition: width $animationDuration ease-in-out 0ms, visibility $animationDuration ease-in-out 0ms;
+        }
+
+        .line-1 {
+            transform: rotate(45deg);
+            transition: transform $animationDuration ease-in-out $animationDuration;
+        }
+        .line-3 {
+            transform: rotate(-45deg);
+            transition: transform $animationDuration ease-in-out $animationDuration;
+        }
+    }
+}
+
+.close {
+    &.nav__menu {
+        height: $height;
+        transition: height $animationDuration ease-in-out $animationDuration;
+
+        .line-2 {
+            visibility: visible;
+            width: 100%;
+            transition: visibility $animationDuration ease-in-out $animationDuration;
+        }
+
+        .line-1 {
+            transform: rotate(0deg);
+            transition: transform $animationDuration ease-in-out 0ms;
+        }
+        .line-3 {
+            transform: rotate(0deg);
+            transition: transform $animationDuration ease-in-out 0ms;
+        }
+    }
+}
+
+.nav__menu {
+    display: flex;
+    align-content: center;
+    cursor: pointer;
+    flex-direction: column;
+    height: $height;
+    justify-content: space-around;
+    position: relative;
+    width: $width;
+
+    .line-1,
+    .line-2,
+    .line-3 {
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 1px 2px 1px 1px rgba(63, 63, 63, 0.15);
+        height: $lineHeight;
+        width: $width;
+    }
+
+    .line-1 {
+        position: absolute;
+        top: 0;
+    }
+    
+    .line-2 {
+        margin: 0 auto;
+    }
+    
+    .line-3 {
+        bottom: 0;
+        position: absolute;
+    }
+}

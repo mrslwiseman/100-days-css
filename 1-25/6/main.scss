@@ -54,7 +54,6 @@ body {
     overflow: hidden;
     width: 450px;
 
-
     .card__name {
         margin: 25px 0;
 
@@ -72,46 +71,46 @@ body {
             height: 130px;
             justify-content: center;
             position: relative;
-            
+
             &:hover {
-                &:before {
-                    transform: rotate(180deg);
+                .img-container--outer{
+                    transform: rotate(540deg) ;
                 }
-                &:after {
-                    transform: rotate(0deg);
-                    
+                .img-container--inner{
+                    transform: rotate(180deg) ;
                 }
             }
-            &:before {
+            
+            .img-container {
+                padding: 5px;
                 border-radius: 50%;
-                border-bottom: 1px solid #FFB2C9;
-                border-left: 1px solid transparent;
-                border-top: 1px solid #FFB2C9;
-                border-right: 1px solid #FFB2C9;
-                content: "";
-                display: block;
-                height: 115px;
-                position: absolute;
-                transition: all 1s ease;
-                width: 115px;
-            }
-            &:after {
-                border-top: 1px solid #FFB2C9;
-                border-right: 1px solid #FFB2C9;
-                border-bottom: 1px solid #FFB2C9;
-                border-left: 1px solid transparent;
-                border-radius: 50%;
-                content: "";
-                display: block;
-                height: 130px;
-                position: absolute;
-                transition: all 1s ease;
-                top: 0;
-                width: 130px;
-                transform: rotate(180deg);
+                &.img-container--outer {
+                    transition: all 1s ease;
+                    // @extend .img-container--outer;
+                    border-bottom: 1px solid #FFB2C9;
+                    border-top: 1px solid #FFB2C9;
+                    border-right: 1px solid #FFB2C9;
+                    border-left: 1px solid transparent;
+                    position: absolute;
+                    height: 120px;
+                    width: 120px;
+                }
+                &.img-container--inner {
+                    transition: all 1s ease;
+                    border-bottom: 1px solid #FFB2C9;
+                    border-top: 1px solid #FFB2C9;
+                    border-left: 1px solid #FFB2C9;
+                    border-right: 1px solid transparent;
+                    height: 110px;
+                    width: 110px;
+                    position: absolute;
+                }
+               
             }
             img {
-               border-radius: 50%;
+                margin-top: 2px;
+                border-radius: 50%;
+                
             }
         }
  
@@ -162,7 +161,7 @@ body {
             }
             h4 {
                 font-weight: 400;
-                letter-spacing: 1.6;
+                letter-spacing: 1.6px;
                 margin: 0;
             }
             p {
