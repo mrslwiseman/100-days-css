@@ -1,0 +1,129 @@
+
+// colours
+$primary: #5F98CD;
+$secondary:  #3a5772;
+$secondaryHover:  #21394f;
+$textPrimary: #5d5d5d;
+$textSecondary: #9ebad5;
+$cardBgColor: white;
+$borderLeftColor: #e8e8e8;
+$frameBgColor: #122738;
+
+$frameHeight: 600px;
+$frameWidth: 700px;
+
+@import "normalize";
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600';
+
+
+* {
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+p {
+    margin: 0;
+
+}
+
+strong {
+    font-weight: 400;
+}
+
+html, 
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: $cardBgColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $frameBgColor;
+    box-shadow: 2px 3px 10px 3px rgba(160, 160, 160, 0.35);
+    height: $frameHeight;
+    overflow: hidden;
+    position: relative;
+    width: $frameWidth;
+    filter: blur(5px);
+    filter: contrast(30);
+}
+
+@mixin randomSize($min: 0, $max: 100){
+    $random: random($max) + $min + px;
+    height: $random;
+    width: $random;
+}
+
+.circle {
+    position: absolute;
+   
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border-radius: 50%;
+    filter: blur(5px);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+        // transform: scale(1.0);
+    } to {
+        transform: rotate(360deg);
+        // transform: scale(1.5);
+        transform: translate(20px 20px)
+    }
+}
+
+.circle-container{
+    
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+@for $i from 0 through 15 {
+    .circle-#{$i} {
+        // min + (max-min) * random(n) / n
+        $randomDuration: 3000 + (6000-3000) * random(10) / 10 + ms;
+        $randomOffset: -50 + (150 - -50) * random(10) / 10 + px;
+        @include randomSize(8, 12);
+        animation: rotate $randomDuration linear $randomDuration infinite;
+        transform-origin: $randomOffset $randomOffset;
+    }
+}
+
+.circle-main {
+    height: 100px;
+    width: 100px;
+    animation: rotate 3000ms linear 0ms infinite;
+    transform-origin: 50% 60%;
+}
+
+.circle-0 {
+    height: 80px;
+    width: 80px;
+    animation: rotate 3000ms linear 0ms infinite alternate-reverse;
+    transform-origin: 40px 40px;
+}
+
+.circle-1 {
+    height: 50px;
+    width: 50px;
+    transform-origin: 15px 15px;
+    animation: rotate 3000ms linear 0ms infinite alternate-reverse;
+}
