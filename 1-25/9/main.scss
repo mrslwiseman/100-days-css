@@ -1,0 +1,182 @@
+// colours
+
+$cardBgColor: white;
+$frameBgColor: #122738;
+
+$frameHeight: 600px;
+$frameWidth: 700px;
+
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    @extend html;
+    background-color: $cardBgColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    background-image: linear-gradient(-180deg, #122738 0%, #2D5B80 82%);
+    box-shadow: 2px 3px 10px 3px rgba(160, 160, 160, 0.35);
+    height: $frameHeight;
+    overflow: hidden;
+    position: relative;
+    width: $frameWidth;
+
+}
+
+@keyframes rain {
+    0% {
+        transform: translate(0,0) scale(1,1);
+        opacity: 1;
+    } 90% {
+        transform: translate(-300px,580px) scale(1,1);
+        opacity:1;
+    } 100% {
+        transform: translate(-300px,580px) scale(6,0.1);
+        opacity: 0;
+        background-color: rgb(97, 110, 118);
+        
+    } 
+}
+
+.droplet {
+    // top: 100px;
+    position: absolute;
+    transform-origin: bottom;
+    top: -15px;
+    border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+    z-index:99;
+    
+}
+// forground
+@for $i from 1 through 20 {
+    .droplet-#{$i} {
+        @extend .droplet;
+        $size: 8 + (12-8) * random(10) / 10 + px;
+        height: $size;
+        width: $size;
+        background-color: rgb(177, 228, 255);
+        top: -15 + (-80 - -15) * random(10) / 10 + px;
+        left: random(1000) + px;
+        animation: rain 1500ms linear infinite;
+        animation-delay: random(3000) + ms;
+    }
+}
+// background
+@for $i from 21 through 40 {
+    .droplet-#{$i} {
+        @extend .droplet;
+        $size: 8 + (12-8) * random(10) / 10 + px;
+        height: $size;
+        width: $size;
+        background-color: rgb(87, 140, 169);
+        top: -100 + (-150 - -100) * random(10) / 10 + px;
+        left: random(1000) + px;
+        animation: rain 2000ms linear infinite;
+        animation-delay: random(3000) + ms;
+        filter: blur(1px);
+    }
+}
+
+$background: #272727;
+$foreground: #383838;
+.hills {
+    width: 100%;
+    position: relative;
+    align-self: center;
+    .hill-1 {
+        top: -60px;
+        left: -80px;
+        position: absolute;
+        z-index: 2;
+        width: 400px;
+        height: 400px;
+        border-radius: 50% ;
+        background-color: $background;
+    }
+    .hill-2 {
+        top: 0;
+        position: absolute;
+        z-index: 3;
+        left: 150px;
+        width: 400px;
+        height: 400px;
+        border-radius: 50% ;
+        background-color: $foreground;
+    }
+    .hill-3 {
+        right: -150px;
+        top: 0;
+        z-index: 2;
+        position: absolute;
+        width: 450px;
+        height: 450px;
+        border-radius: 50% ;
+        background-color: $background;
+    }
+    .ground {
+        position: absolute;
+        z-index: 10;
+        bottom: -300px;
+        width: 100%;
+        height: 200px;
+        background-image: linear-gradient(0deg, #797979 5%, #565656 57%, #383838 98%);
+        box-shadow: 0 -3px 14px 0 rgba(66,66,66,0.30);
+        // border-radius: 50% 50% 0 0;
+    }
+}
+
+@keyframes moon {
+from {
+    opacity:0;
+    transform: translateY(0);
+}
+ to {
+        opacity:1;
+        transform: translateY(-200px);
+    }
+}
+
+.moon {
+    opacity: 0;
+    background: #FFF5DD;
+    box-shadow: 0 2px 24px 10px rgba(255,255,255,0.10), inset 0 1px 11px 0 #FFD76E;
+    animation: moon 3000ms ease-in-out 1000ms;
+    animation-fill-mode: forwards;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    bottom: 200px;
+    left: 150px;
+    // moonspots
+    &:before, 
+    &:after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        background: #FFF3D4;
+        border: 1px solid #FFEDBD;
+    }
+    &:before {
+        height: 20px;
+        width: 20px;
+        top:40px;
+        left: 30px;
+    }
+    &:after {
+        height: 15px;
+        width: 15px;
+        top: 70px;
+        left: 70px;
+    }
+}

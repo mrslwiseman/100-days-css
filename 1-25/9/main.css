@@ -1,0 +1,643 @@
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  width: 100%; }
+
+body {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#122738), color-stop(82%, #2D5B80));
+  background-image: linear-gradient(-180deg, #122738 0%, #2D5B80 82%);
+  -webkit-box-shadow: 2px 3px 10px 3px rgba(160, 160, 160, 0.35);
+  box-shadow: 2px 3px 10px 3px rgba(160, 160, 160, 0.35);
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  width: 700px; }
+
+@-webkit-keyframes rain {
+  0% {
+    -webkit-transform: translate(0, 0) scale(1, 1);
+    transform: translate(0, 0) scale(1, 1);
+    opacity: 1; }
+  90% {
+    -webkit-transform: translate(-300px, 580px) scale(1, 1);
+    transform: translate(-300px, 580px) scale(1, 1);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translate(-300px, 580px) scale(6, 0.1);
+    transform: translate(-300px, 580px) scale(6, 0.1);
+    opacity: 0;
+    background-color: #616e76; } }
+
+@keyframes rain {
+  0% {
+    -webkit-transform: translate(0, 0) scale(1, 1);
+    transform: translate(0, 0) scale(1, 1);
+    opacity: 1; }
+  90% {
+    -webkit-transform: translate(-300px, 580px) scale(1, 1);
+    transform: translate(-300px, 580px) scale(1, 1);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translate(-300px, 580px) scale(6, 0.1);
+    transform: translate(-300px, 580px) scale(6, 0.1);
+    opacity: 0;
+    background-color: #616e76; } }
+
+.droplet, .droplet-1, .droplet-2, .droplet-3, .droplet-4, .droplet-5, .droplet-6, .droplet-7, .droplet-8, .droplet-9, .droplet-10, .droplet-11, .droplet-12, .droplet-13, .droplet-14, .droplet-15, .droplet-16, .droplet-17, .droplet-18, .droplet-19, .droplet-20, .droplet-21, .droplet-22, .droplet-23, .droplet-24, .droplet-25, .droplet-26, .droplet-27, .droplet-28, .droplet-29, .droplet-30, .droplet-31, .droplet-32, .droplet-33, .droplet-34, .droplet-35, .droplet-36, .droplet-37, .droplet-38, .droplet-39, .droplet-40 {
+  position: absolute;
+  -webkit-transform-origin: bottom;
+  transform-origin: bottom;
+  top: -15px;
+  border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+  z-index: 99; }
+
+.droplet-1 {
+  height: 12px;
+  width: 12px;
+  background-color: #b1e4ff;
+  top: -73.5px;
+  left: 116px;
+  -webkit-animation: rain 1500ms linear infinite;
+  animation: rain 1500ms linear infinite;
+  -webkit-animation-delay: 1003ms;
+  animation-delay: 1003ms; }
+
+.droplet-2 {
+  height: 9.2px;
+  width: 9.2px;
+  background-color: #b1e4ff;
+  top: -60.5px;
+  left: 937px;
+  -webkit-animation: rain 1500ms linear infinite;
+  animation: rain 1500ms linear infinite;
+  -webkit-animation-delay: 2070ms;
+  animation-delay: 2070ms; }
+
+.droplet-3 {
+  height: 11.6px;
+  width: 11.6px;
+  background-color: #b1e4ff;
+  top: -41px;
+  left: 997px;
+  -webkit-animation: rain 1500ms linear infinite;
+  animation: rain 1500ms linear infinite;
+  -webkit-animation-delay: 1346ms;
+  animation-delay: 1346ms; }
+
+.droplet-4 {
+  height: 10px;
+  width: 10px;
+  background-color: #b1e4ff;
+  top: -47.5px;
+  left: 553px;
+  -webkit-animation: rain 1500ms linear infinite;
+  animation: rain 1500ms linear infinite;
+  -webkit-animation-delay: 2959ms;
+  animation-delay: 2959ms; }
+
+.droplet-5 {
+  height: 10.4px;
+  width: 10.4px;
+  background-color: #b1e4ff;
+  top: -80px;
+  left: 813px;
+  -webkit-animation: rain 1500ms linear infinite;
+  animation: rain 1500ms linear infinite;
+  -webkit-animation-delay: 1882ms;
+  animation-delay: 1882ms; }
+
+.droplet-6 {
+  height: 9.2px;
+  width: 9.2px;
+  background-color: #b1e4ff;
+  top: -54px;
+  left: 301px;
+  -webkit-animation: rain 1500ms linear infinite;
+  animation: rain 1500ms linear infinite;
+  -webkit-animation-delay: 2636ms;
+  animation-delay: 2636ms; }
+
+.droplet-7 {
+  height: 10.8px;
+  width: 10.8px;
+  background-color: #b1e4ff;
+  top: -60.5px;
+  left: 531px;
+  -webkit-animation: rain 1500ms linear infinite;
+  animation: rain 1500ms linear infinite;
+  -webkit-animation-delay: 1593ms;
+  animation-delay: 1593ms; }
+
+.droplet-8 {
+  height: 10px;
+  width: 10px;
+  background-color: #b1e4ff;
+  top: -80px;
+  left: 947px;
+  -webkit-animation: rain 1500ms linear infinite;
+  animation: rain 1500ms linear infinite;
+  -webkit-animation-delay: 464ms;
+  animation-delay: 464ms; }
+
+.droplet-9 {
+  height: 9.2px;
+  width: 9.2px;
+  background-color: #b1e4ff;
+  top: -21.5px;
+  left: 358px;
+  -webkit-animation: rain 1500ms linear infinite;
+  animation: rain 1500ms linear infinite;
+  -webkit-animation-delay: 6ms;
+  animation-delay: 6ms; }
+
+.droplet-10 {
+  height: 8.8px;
+  width: 8.8px;
+  background-color: #b1e4ff;
+  top: -28px;
+  left: 471px;
+  -webkit-animation: rain 1500ms linear infinite;
+  animation: rain 1500ms linear infinite;
+  -webkit-animation-delay: 2701ms;
+  animation-delay: 2701ms; }
+
+.droplet-11 {
+  height: 10px;
+  width: 10px;
+  background-color: #b1e4ff;
+  top: -28px;
+  left: 388px;
+  -webkit-animation: rain 1500ms linear infinite;
+  animation: rain 1500ms linear infinite;
+  -webkit-animation-delay: 2947ms;
+  animation-delay: 2947ms; }
+
+.droplet-12 {
+  height: 9.6px;
+  width: 9.6px;
+  background-color: #b1e4ff;
+  top: -80px;
+  left: 859px;
+  -webkit-animation: rain 1500ms linear infinite;
+  animation: rain 1500ms linear infinite;
+  -webkit-animation-delay: 2256ms;
+  animation-delay: 2256ms; }
+
+.droplet-13 {
+  height: 10px;
+  width: 10px;
+  background-color: #b1e4ff;
+  top: -47.5px;
+  left: 72px;
+  -webkit-animation: rain 1500ms linear infinite;
+  animation: rain 1500ms linear infinite;
+  -webkit-animation-delay: 1531ms;
+  animation-delay: 1531ms; }
+
+.droplet-14 {
+  height: 11.2px;
+  width: 11.2px;
+  background-color: #b1e4ff;
+  top: -34.5px;
+  left: 917px;
+  -webkit-animation: rain 1500ms linear infinite;
+  animation: rain 1500ms linear infinite;
+  -webkit-animation-delay: 1729ms;
+  animation-delay: 1729ms; }
+
+.droplet-15 {
+  height: 8.4px;
+  width: 8.4px;
+  background-color: #b1e4ff;
+  top: -73.5px;
+  left: 540px;
+  -webkit-animation: rain 1500ms linear infinite;
+  animation: rain 1500ms linear infinite;
+  -webkit-animation-delay: 1821ms;
+  animation-delay: 1821ms; }
+
+.droplet-16 {
+  height: 10px;
+  width: 10px;
+  background-color: #b1e4ff;
+  top: -67px;
+  left: 98px;
+  -webkit-animation: rain 1500ms linear infinite;
+  animation: rain 1500ms linear infinite;
+  -webkit-animation-delay: 1541ms;
+  animation-delay: 1541ms; }
+
+.droplet-17 {
+  height: 12px;
+  width: 12px;
+  background-color: #b1e4ff;
+  top: -60.5px;
+  left: 538px;
+  -webkit-animation: rain 1500ms linear infinite;
+  animation: rain 1500ms linear infinite;
+  -webkit-animation-delay: 2016ms;
+  animation-delay: 2016ms; }
+
+.droplet-18 {
+  height: 9.2px;
+  width: 9.2px;
+  background-color: #b1e4ff;
+  top: -67px;
+  left: 75px;
+  -webkit-animation: rain 1500ms linear infinite;
+  animation: rain 1500ms linear infinite;
+  -webkit-animation-delay: 1845ms;
+  animation-delay: 1845ms; }
+
+.droplet-19 {
+  height: 10.8px;
+  width: 10.8px;
+  background-color: #b1e4ff;
+  top: -28px;
+  left: 720px;
+  -webkit-animation: rain 1500ms linear infinite;
+  animation: rain 1500ms linear infinite;
+  -webkit-animation-delay: 522ms;
+  animation-delay: 522ms; }
+
+.droplet-20 {
+  height: 9.6px;
+  width: 9.6px;
+  background-color: #b1e4ff;
+  top: -60.5px;
+  left: 135px;
+  -webkit-animation: rain 1500ms linear infinite;
+  animation: rain 1500ms linear infinite;
+  -webkit-animation-delay: 1742ms;
+  animation-delay: 1742ms; }
+
+.droplet-21 {
+  height: 10.4px;
+  width: 10.4px;
+  background-color: #578ca9;
+  top: -130px;
+  left: 571px;
+  -webkit-animation: rain 2000ms linear infinite;
+  animation: rain 2000ms linear infinite;
+  -webkit-animation-delay: 1899ms;
+  animation-delay: 1899ms;
+  -webkit-filter: blur(1px);
+  filter: blur(1px); }
+
+.droplet-22 {
+  height: 12px;
+  width: 12px;
+  background-color: #578ca9;
+  top: -120px;
+  left: 614px;
+  -webkit-animation: rain 2000ms linear infinite;
+  animation: rain 2000ms linear infinite;
+  -webkit-animation-delay: 966ms;
+  animation-delay: 966ms;
+  -webkit-filter: blur(1px);
+  filter: blur(1px); }
+
+.droplet-23 {
+  height: 10.4px;
+  width: 10.4px;
+  background-color: #578ca9;
+  top: -140px;
+  left: 113px;
+  -webkit-animation: rain 2000ms linear infinite;
+  animation: rain 2000ms linear infinite;
+  -webkit-animation-delay: 1544ms;
+  animation-delay: 1544ms;
+  -webkit-filter: blur(1px);
+  filter: blur(1px); }
+
+.droplet-24 {
+  height: 11.6px;
+  width: 11.6px;
+  background-color: #578ca9;
+  top: -130px;
+  left: 721px;
+  -webkit-animation: rain 2000ms linear infinite;
+  animation: rain 2000ms linear infinite;
+  -webkit-animation-delay: 220ms;
+  animation-delay: 220ms;
+  -webkit-filter: blur(1px);
+  filter: blur(1px); }
+
+.droplet-25 {
+  height: 10.8px;
+  width: 10.8px;
+  background-color: #578ca9;
+  top: -130px;
+  left: 910px;
+  -webkit-animation: rain 2000ms linear infinite;
+  animation: rain 2000ms linear infinite;
+  -webkit-animation-delay: 2865ms;
+  animation-delay: 2865ms;
+  -webkit-filter: blur(1px);
+  filter: blur(1px); }
+
+.droplet-26 {
+  height: 9.6px;
+  width: 9.6px;
+  background-color: #578ca9;
+  top: -125px;
+  left: 853px;
+  -webkit-animation: rain 2000ms linear infinite;
+  animation: rain 2000ms linear infinite;
+  -webkit-animation-delay: 615ms;
+  animation-delay: 615ms;
+  -webkit-filter: blur(1px);
+  filter: blur(1px); }
+
+.droplet-27 {
+  height: 9.6px;
+  width: 9.6px;
+  background-color: #578ca9;
+  top: -130px;
+  left: 475px;
+  -webkit-animation: rain 2000ms linear infinite;
+  animation: rain 2000ms linear infinite;
+  -webkit-animation-delay: 2068ms;
+  animation-delay: 2068ms;
+  -webkit-filter: blur(1px);
+  filter: blur(1px); }
+
+.droplet-28 {
+  height: 8.8px;
+  width: 8.8px;
+  background-color: #578ca9;
+  top: -140px;
+  left: 979px;
+  -webkit-animation: rain 2000ms linear infinite;
+  animation: rain 2000ms linear infinite;
+  -webkit-animation-delay: 2730ms;
+  animation-delay: 2730ms;
+  -webkit-filter: blur(1px);
+  filter: blur(1px); }
+
+.droplet-29 {
+  height: 8.8px;
+  width: 8.8px;
+  background-color: #578ca9;
+  top: -145px;
+  left: 753px;
+  -webkit-animation: rain 2000ms linear infinite;
+  animation: rain 2000ms linear infinite;
+  -webkit-animation-delay: 1437ms;
+  animation-delay: 1437ms;
+  -webkit-filter: blur(1px);
+  filter: blur(1px); }
+
+.droplet-30 {
+  height: 12px;
+  width: 12px;
+  background-color: #578ca9;
+  top: -135px;
+  left: 859px;
+  -webkit-animation: rain 2000ms linear infinite;
+  animation: rain 2000ms linear infinite;
+  -webkit-animation-delay: 1980ms;
+  animation-delay: 1980ms;
+  -webkit-filter: blur(1px);
+  filter: blur(1px); }
+
+.droplet-31 {
+  height: 9.2px;
+  width: 9.2px;
+  background-color: #578ca9;
+  top: -135px;
+  left: 645px;
+  -webkit-animation: rain 2000ms linear infinite;
+  animation: rain 2000ms linear infinite;
+  -webkit-animation-delay: 2716ms;
+  animation-delay: 2716ms;
+  -webkit-filter: blur(1px);
+  filter: blur(1px); }
+
+.droplet-32 {
+  height: 11.6px;
+  width: 11.6px;
+  background-color: #578ca9;
+  top: -105px;
+  left: 541px;
+  -webkit-animation: rain 2000ms linear infinite;
+  animation: rain 2000ms linear infinite;
+  -webkit-animation-delay: 539ms;
+  animation-delay: 539ms;
+  -webkit-filter: blur(1px);
+  filter: blur(1px); }
+
+.droplet-33 {
+  height: 10.8px;
+  width: 10.8px;
+  background-color: #578ca9;
+  top: -140px;
+  left: 540px;
+  -webkit-animation: rain 2000ms linear infinite;
+  animation: rain 2000ms linear infinite;
+  -webkit-animation-delay: 1528ms;
+  animation-delay: 1528ms;
+  -webkit-filter: blur(1px);
+  filter: blur(1px); }
+
+.droplet-34 {
+  height: 11.6px;
+  width: 11.6px;
+  background-color: #578ca9;
+  top: -115px;
+  left: 439px;
+  -webkit-animation: rain 2000ms linear infinite;
+  animation: rain 2000ms linear infinite;
+  -webkit-animation-delay: 2748ms;
+  animation-delay: 2748ms;
+  -webkit-filter: blur(1px);
+  filter: blur(1px); }
+
+.droplet-35 {
+  height: 11.6px;
+  width: 11.6px;
+  background-color: #578ca9;
+  top: -130px;
+  left: 695px;
+  -webkit-animation: rain 2000ms linear infinite;
+  animation: rain 2000ms linear infinite;
+  -webkit-animation-delay: 2924ms;
+  animation-delay: 2924ms;
+  -webkit-filter: blur(1px);
+  filter: blur(1px); }
+
+.droplet-36 {
+  height: 10px;
+  width: 10px;
+  background-color: #578ca9;
+  top: -125px;
+  left: 549px;
+  -webkit-animation: rain 2000ms linear infinite;
+  animation: rain 2000ms linear infinite;
+  -webkit-animation-delay: 678ms;
+  animation-delay: 678ms;
+  -webkit-filter: blur(1px);
+  filter: blur(1px); }
+
+.droplet-37 {
+  height: 10.8px;
+  width: 10.8px;
+  background-color: #578ca9;
+  top: -120px;
+  left: 336px;
+  -webkit-animation: rain 2000ms linear infinite;
+  animation: rain 2000ms linear infinite;
+  -webkit-animation-delay: 1141ms;
+  animation-delay: 1141ms;
+  -webkit-filter: blur(1px);
+  filter: blur(1px); }
+
+.droplet-38 {
+  height: 10.8px;
+  width: 10.8px;
+  background-color: #578ca9;
+  top: -125px;
+  left: 290px;
+  -webkit-animation: rain 2000ms linear infinite;
+  animation: rain 2000ms linear infinite;
+  -webkit-animation-delay: 369ms;
+  animation-delay: 369ms;
+  -webkit-filter: blur(1px);
+  filter: blur(1px); }
+
+.droplet-39 {
+  height: 9.6px;
+  width: 9.6px;
+  background-color: #578ca9;
+  top: -125px;
+  left: 482px;
+  -webkit-animation: rain 2000ms linear infinite;
+  animation: rain 2000ms linear infinite;
+  -webkit-animation-delay: 2083ms;
+  animation-delay: 2083ms;
+  -webkit-filter: blur(1px);
+  filter: blur(1px); }
+
+.droplet-40 {
+  height: 10.4px;
+  width: 10.4px;
+  background-color: #578ca9;
+  top: -150px;
+  left: 560px;
+  -webkit-animation: rain 2000ms linear infinite;
+  animation: rain 2000ms linear infinite;
+  -webkit-animation-delay: 187ms;
+  animation-delay: 187ms;
+  -webkit-filter: blur(1px);
+  filter: blur(1px); }
+
+.hills {
+  width: 100%;
+  position: relative;
+  -ms-flex-item-align: center;
+  align-self: center; }
+  .hills .hill-1 {
+    top: -60px;
+    left: -80px;
+    position: absolute;
+    z-index: 2;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: #272727; }
+  .hills .hill-2 {
+    top: 0;
+    position: absolute;
+    z-index: 3;
+    left: 150px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: #383838; }
+  .hills .hill-3 {
+    right: -150px;
+    top: 0;
+    z-index: 2;
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background-color: #272727; }
+  .hills .ground {
+    position: absolute;
+    z-index: 10;
+    bottom: -300px;
+    width: 100%;
+    height: 200px;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(5%, #797979), color-stop(57%, #565656), color-stop(98%, #383838));
+    background-image: linear-gradient(0deg, #797979 5%, #565656 57%, #383838 98%);
+    -webkit-box-shadow: 0 -3px 14px 0 rgba(66, 66, 66, 0.3);
+    box-shadow: 0 -3px 14px 0 rgba(66, 66, 66, 0.3); }
+
+@-webkit-keyframes moon {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(-200px);
+    transform: translateY(-200px); } }
+
+@keyframes moon {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(-200px);
+    transform: translateY(-200px); } }
+
+.moon {
+  opacity: 0;
+  background: #FFF5DD;
+  -webkit-box-shadow: 0 2px 24px 10px rgba(255, 255, 255, 0.1), inset 0 1px 11px 0 #FFD76E;
+  box-shadow: 0 2px 24px 10px rgba(255, 255, 255, 0.1), inset 0 1px 11px 0 #FFD76E;
+  -webkit-animation: moon 3000ms ease-in-out 1000ms;
+  animation: moon 3000ms ease-in-out 1000ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  bottom: 200px;
+  left: 150px; }
+  .moon:before, .moon:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: #FFF3D4;
+    border: 1px solid #FFEDBD; }
+  .moon:before {
+    height: 20px;
+    width: 20px;
+    top: 40px;
+    left: 30px; }
+  .moon:after {
+    height: 15px;
+    width: 15px;
+    top: 70px;
+    left: 70px; }
