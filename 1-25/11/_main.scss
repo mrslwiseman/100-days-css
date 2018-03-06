@@ -1,0 +1,184 @@
+$background: #1a1a1a;
+$primary: #ed8f8f;
+$secondary: #90D818;
+$tertiary: #20BCF0;
+$highlight: #F8E300;
+
+@mixin center-xy($height, $width: $height){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -$height/2;
+    margin-left: -$width/2;
+}
+
+@mixin circle($size){
+    height: $size;
+    width: $size;
+    border-radius: 50%;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@mixin drawx($length, $duration, $delay: 0s ){
+    visibility: visible;
+    stroke-dasharray: $length;
+    stroke-dashoffset: $length;
+    animation: draw $duration $delay ease alternate forwards;
+}
+
+.shoe {
+    // visibility: hidden;
+    @include center-xy(416px, 627px);
+    stroke: $primary;
+}
+
+
+#air {
+    fill: $background;
+    stroke: $highlight;
+    $duration: .2s;
+    $initialDelay: 2.5s;
+    #Path-36 {
+        @include drawx(200,$duration, $initialDelay);
+    }
+    #Path-37 {
+        @include drawx(200,$duration, $duration * 1 + $initialDelay);
+
+    }
+    #Path-38 {
+        @include drawx(200,$duration, $duration * 1 + $initialDelay);
+
+    }
+    #Path-39 {
+        @include drawx(200,$duration, $duration * 2 + $initialDelay);
+
+    }
+    #Path-40 {
+        @include drawx(200,$duration, $duration * 3 + $initialDelay);
+
+    }
+    #Path-41 {
+        @include drawx(200,$duration, $duration * 3 + $initialDelay);
+
+    }
+    #Path-42 {
+        @include drawx(200,$duration, $duration * 4 + $initialDelay);
+
+    }
+}
+
+
+#sole {
+    @include drawx(1800,2s, .5s);
+}
+#main {
+    @include drawx(1800,2s);
+    stroke: $primary;
+}
+#upper {
+    @include drawx(1000,2s,1.5s);
+}
+
+#logo {
+    @include drawx(680,1s,1s);
+    fill: $background;
+    stroke: $highlight;
+}
+
+
+#laces-under,
+#laces-top {
+    stroke: $tertiary;
+}
+
+// laces under
+$duration: .25s;
+$initialDelay: 1s;
+#lace-under-1,
+#lace-top-1 {
+    @include drawx(200,$duration, $initialDelay);
+}
+#lace-under-2,
+#lace-top-2 {
+    @include drawx(200,$duration, $duration * 1 + $initialDelay);
+}
+#lace-under-3,
+#lace-top-3 {
+    @include drawx(200,$duration, $duration * 2 + $initialDelay);
+}
+#lace-under-4,
+#lace-top-4 {
+    @include drawx(200,$duration, $duration * 3 + $initialDelay);
+}
+#lace-under-5,
+#lace-under-5a,
+#lace-top-5,{
+    @include drawx(200,$duration, $duration * 4 + $initialDelay);
+}
+#lace-under-6,
+#lace-under-6a,
+#lace-top-6,{
+    @include drawx(200,$duration, $duration * 5 + $initialDelay);
+}
+#lace-under-7,
+#lace-top-7,{
+    @include drawx(200,$duration, $duration * 6 + $initialDelay);
+}
+
+
+
+@keyframes reveal {
+    to {
+        visibility: visible;
+    }
+}
+
+@mixin revealx($duration, $delay){
+    
+    animation: reveal $duration $delay ease alternate forwards; 
+}
+
+#lace-masks {
+    // visibility: hidden;
+    stroke: none;
+    fill: $background;    
+    @include revealx(.25s, 2s)
+}
+
+#strap {
+    @include drawx(500, 1s, 1s);
+    fill: $background;
+    stroke: $secondary;
+}
+#buckle {
+    @include drawx(500, 1s, 1.5s);
+    @include drawx(500, 1s, 1.5s);
+}
+
+#heel-top {
+    @include drawx(500, 1s, 1.5s);
+}
+
+#toe {
+    @include drawx(500, 1s, 1.5s);
+}
+
+#side-1 {
+    @include drawx(400, .25s, 2s);
+}
+#side-2 {
+    @include drawx(400, .25s, 2.25s);
+}
+
+#upper-laces {
+    @include drawx(400, .25s, 2.25s);
+}
+
+#tongue {
+    @include drawx(200, .25s, 2.25s);
+}

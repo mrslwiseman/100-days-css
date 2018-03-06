@@ -1,0 +1,264 @@
+@import url(_normalize.css);
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  width: 100%; }
+
+body {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: linear-gradient(216deg, #333 2%, #000000 100%);
+  -webkit-box-shadow: 2px 3px 10px 3px rgba(160, 160, 160, 0.35);
+  box-shadow: 2px 3px 10px 3px rgba(160, 160, 160, 0.35);
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  width: 700px; }
+
+@-webkit-keyframes draw {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0; } }
+
+.shoe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -208px;
+  margin-left: -313.5px;
+  stroke: #ed8f8f; }
+
+#air {
+  fill: #1a1a1a;
+  stroke: #F8E300; }
+  #air #Path-36 {
+    visibility: visible;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    -webkit-animation: draw 0.2s 2.5s ease alternate forwards;
+    animation: draw 0.2s 2.5s ease alternate forwards; }
+  #air #Path-37 {
+    visibility: visible;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    -webkit-animation: draw 0.2s 2.7s ease alternate forwards;
+    animation: draw 0.2s 2.7s ease alternate forwards; }
+  #air #Path-38 {
+    visibility: visible;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    -webkit-animation: draw 0.2s 2.7s ease alternate forwards;
+    animation: draw 0.2s 2.7s ease alternate forwards; }
+  #air #Path-39 {
+    visibility: visible;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    -webkit-animation: draw 0.2s 2.9s ease alternate forwards;
+    animation: draw 0.2s 2.9s ease alternate forwards; }
+  #air #Path-40 {
+    visibility: visible;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    -webkit-animation: draw 0.2s 3.1s ease alternate forwards;
+    animation: draw 0.2s 3.1s ease alternate forwards; }
+  #air #Path-41 {
+    visibility: visible;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    -webkit-animation: draw 0.2s 3.1s ease alternate forwards;
+    animation: draw 0.2s 3.1s ease alternate forwards; }
+  #air #Path-42 {
+    visibility: visible;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    -webkit-animation: draw 0.2s 3.3s ease alternate forwards;
+    animation: draw 0.2s 3.3s ease alternate forwards; }
+
+#sole {
+  visibility: visible;
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1800;
+  -webkit-animation: draw 2s 0.5s ease alternate forwards;
+  animation: draw 2s 0.5s ease alternate forwards; }
+
+#main {
+  visibility: visible;
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1800;
+  -webkit-animation: draw 2s 0s ease alternate forwards;
+  animation: draw 2s 0s ease alternate forwards;
+  stroke: #ed8f8f; }
+
+#upper {
+  visibility: visible;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: draw 2s 1.5s ease alternate forwards;
+  animation: draw 2s 1.5s ease alternate forwards; }
+
+#logo {
+  visibility: visible;
+  stroke-dasharray: 680;
+  stroke-dashoffset: 680;
+  -webkit-animation: draw 1s 1s ease alternate forwards;
+  animation: draw 1s 1s ease alternate forwards;
+  fill: #1a1a1a;
+  stroke: #F8E300; }
+
+#laces-under,
+#laces-top {
+  stroke: #20BCF0; }
+
+#lace-under-1,
+#lace-top-1 {
+  visibility: visible;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  -webkit-animation: draw 0.25s 1s ease alternate forwards;
+  animation: draw 0.25s 1s ease alternate forwards; }
+
+#lace-under-2,
+#lace-top-2 {
+  visibility: visible;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  -webkit-animation: draw 0.25s 1.25s ease alternate forwards;
+  animation: draw 0.25s 1.25s ease alternate forwards; }
+
+#lace-under-3,
+#lace-top-3 {
+  visibility: visible;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  -webkit-animation: draw 0.25s 1.5s ease alternate forwards;
+  animation: draw 0.25s 1.5s ease alternate forwards; }
+
+#lace-under-4,
+#lace-top-4 {
+  visibility: visible;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  -webkit-animation: draw 0.25s 1.75s ease alternate forwards;
+  animation: draw 0.25s 1.75s ease alternate forwards; }
+
+#lace-under-5,
+#lace-under-5a,
+#lace-top-5 {
+  visibility: visible;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  -webkit-animation: draw 0.25s 2s ease alternate forwards;
+  animation: draw 0.25s 2s ease alternate forwards; }
+
+#lace-under-6,
+#lace-under-6a,
+#lace-top-6 {
+  visibility: visible;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  -webkit-animation: draw 0.25s 2.25s ease alternate forwards;
+  animation: draw 0.25s 2.25s ease alternate forwards; }
+
+#lace-under-7,
+#lace-top-7 {
+  visibility: visible;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  -webkit-animation: draw 0.25s 2.5s ease alternate forwards;
+  animation: draw 0.25s 2.5s ease alternate forwards; }
+
+@-webkit-keyframes reveal {
+  to {
+    visibility: visible; } }
+
+@keyframes reveal {
+  to {
+    visibility: visible; } }
+
+#lace-masks {
+  stroke: none;
+  fill: #1a1a1a;
+  -webkit-animation: reveal 0.25s 2s ease alternate forwards;
+  animation: reveal 0.25s 2s ease alternate forwards; }
+
+#strap {
+  visibility: visible;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  -webkit-animation: draw 1s 1s ease alternate forwards;
+  animation: draw 1s 1s ease alternate forwards;
+  fill: #1a1a1a;
+  stroke: #90D818; }
+
+#buckle {
+  visibility: visible;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  -webkit-animation: draw 1s 1.5s ease alternate forwards;
+  animation: draw 1s 1.5s ease alternate forwards;
+  visibility: visible;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: draw 1s 1.5s ease alternate forwards; }
+
+#heel-top {
+  visibility: visible;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  -webkit-animation: draw 1s 1.5s ease alternate forwards;
+  animation: draw 1s 1.5s ease alternate forwards; }
+
+#toe {
+  visibility: visible;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  -webkit-animation: draw 1s 1.5s ease alternate forwards;
+  animation: draw 1s 1.5s ease alternate forwards; }
+
+#side-1 {
+  visibility: visible;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  -webkit-animation: draw 0.25s 2s ease alternate forwards;
+  animation: draw 0.25s 2s ease alternate forwards; }
+
+#side-2 {
+  visibility: visible;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  -webkit-animation: draw 0.25s 2.25s ease alternate forwards;
+  animation: draw 0.25s 2.25s ease alternate forwards; }
+
+#upper-laces {
+  visibility: visible;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  -webkit-animation: draw 0.25s 2.25s ease alternate forwards;
+  animation: draw 0.25s 2.25s ease alternate forwards; }
+
+#tongue {
+  visibility: visible;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  -webkit-animation: draw 0.25s 2.25s ease alternate forwards;
+  animation: draw 0.25s 2.25s ease alternate forwards; }

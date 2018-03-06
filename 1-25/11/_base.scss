@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    @extend html;
+    background-color: $cardBgColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    background-image: linear-gradient(216deg, #333 2%, #000000 100%);
+    box-shadow: 2px 3px 10px 3px rgba(160, 160, 160, 0.35);
+    height: $frameHeight;
+    overflow: hidden;
+    position: relative;
+    width: $frameWidth;
+}
