@@ -1,0 +1,122 @@
+@function hsb($h-hsb, $s-hsb, $b-hsb, $a: 1) {
+    @if $b-hsb == 0 {
+      @return hsla(0, 0, 0, $a)
+    } @else {
+      $l-hsl: ($b-hsb/2) * (2 - ($s-hsb/100));
+      $s-hsl: ($b-hsb * $s-hsb) / if($l-hsl < 50, $l-hsl * 2, 200 - $l-hsl * 2);
+      @return hsla($h-hsb, $s-hsl, $l-hsl, $a);
+    }
+  }
+
+$highlight: hsb(360,60,90);
+$background: hsb(26,6,100);
+$quote-mark: hsb(27,15,100);
+$copy: hsb(27,26,61);
+
+.container {
+    align-items: center;
+    background-color: $background;
+    justify-content: center;
+}
+
+.quote {
+    color: $copy;
+    font-size: 2.25em;
+    font-weight: 300;
+    line-height: 1.5;
+    max-width: 80%;
+    padding-left: 50px;
+    position: relative;
+}
+
+.quote-mark {
+    position: absolute;
+    left: -50px;
+    top: -15px;
+    path {
+        fill: $quote-mark;
+        height:50px;
+        width: 50px;
+    }
+}
+
+.quote-author {
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.highlight {
+    color: $highlight;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+
+    &:hover ~ .popup{
+        opacity: 1;
+    }
+}
+
+.popup {
+    background-color: $highlight;
+    border-radius: 5px;
+    font-size: 1rem;
+    height: 10rem;
+    left: 125px;
+    opacity: 0;
+    position: absolute;
+    top: -60px;
+    transition: 250ms ease;
+    width: 20rem;
+    z-index: 5;
+    &:after {
+        background-color: $highlight;
+        bottom: -10px;
+        content: '';
+        display: block;
+        height: 20px;
+        left: 50%;
+        margin-left: -10px;
+        position: absolute;
+        transform: rotate(45deg);
+        width: 20px;
+        z-index: 10;
+    }
+}
+
+.popup__header {
+    background-color: white;
+    border-radius: 5px 5px 0 0;
+    color: $highlight;
+    font-size: 1.5em;
+    height: 3rem;
+    padding: 5px 20px;
+}   
+
+.popup__main {
+    color: white;
+    font-size: 1.1em;
+    height: 6rem;
+    padding: 15px 20px;
+}
+
+.highlight:after {
+    background-color: white;
+    content: '';
+    display: block;
+    height: 3rem;
+    left: -5px;
+    opacity: 1;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    transition: all 500ms ease;
+    width: 100%;
+    z-index: -1;
+}
+
+ .highlight:hover.highlight:after {
+     background-color: $highlight;
+     height: 4px;
+     top: 3rem;
+ }
