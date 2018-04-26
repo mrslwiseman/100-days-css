@@ -1,0 +1,154 @@
+.container { 
+    width: 400px;
+    height: 400px;
+    position: relative;
+    perspective: 800px;
+    box-shadow: 2px 3px 10px 3px rgba(160, 160, 160, 0.35);
+    background-color: #55524A;
+  }
+
+  #card {
+    $height: 200px;
+    $width: 300px;
+    height: $height;
+    width: $width;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    left: 50%;
+    top: 50%;
+    margin-left: -($width/2);
+    margin-top: -($height/2);
+    box-shadow: 1px 5px 10px 1px rgba(0,0,0,0.50);
+  }
+
+  #card figure {
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #FFCE4E;
+    backface-visibility: hidden;
+  }
+
+#card .front {
+  border-radius: 10px;
+overflow: hidden;
+backface-visibility: hidden;
+}
+
+#card .back {
+  border-radius: 10px;
+  overflow: hidden;
+  transform: rotateX( 180deg );
+  backface-visibility: hidden;
+  }
+
+
+  .container:hover #card{
+    transform: rotateX( 180deg );
+  }
+
+  .bike {
+      top: 85px;
+      left: 50%;
+      margin-left: -65px;
+  }
+
+@keyframes air {
+  to {
+    transform: translateX(-100px);
+  }
+}
+
+.helicopter {
+  left: 50%;
+  margin-left: -67px;
+  top: 50%;
+  margin-top: -30px;
+}
+
+.air {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.air-1,
+.air-2,
+.air-3,
+.air-4 {
+  height: 3px;
+  background-color: #444;
+  transform: translateX(300px);
+  animation: air 1s linear infinite;
+  margin-top: 30px;
+}
+
+.air-1 {
+  animation-delay: -425ms;
+  width: 50px;
+}
+
+.air-2 {
+  width: 100px;
+
+}
+.air-3 {
+  animation-delay: 400ms;
+  width: 150px;
+}
+
+.air-4 {
+  width: 80px;
+}
+
+.surface {
+  position: absolute;
+  top: 160px;
+}
+
+.surface-1 {
+  transform: translateX(250px);
+  animation: fly 3s linear infinite;
+}
+
+.surface-2 {
+  transform: translateX(250px);
+  animation: fly 3s linear infinite;
+  animation-delay: 1500ms;
+}
+
+@keyframes fly {
+  to {
+    transform: translateX(-250px);
+  }
+}
+
+
+
+@keyframes bike {
+  to {
+    transform: scaleY(1.05);
+  }
+}
+
+.bike {
+  animation: bike 400ms ease infinite alternate;
+  transform-origin: 0% 100%;
+}
+
+@keyframes helicopter {
+  from { transform: translateY(10px)};
+  to { transform: translateY(-10px) };
+}
+
+.helicopter {
+  animation: helicopter 1s ease infinite alternate;
+  z-index: 9999;
+}
+
+.svg {
+  position: absolute;
+}

@@ -1,0 +1,155 @@
+$primary: #FFCE4E;
+
+// base 
+.container{
+    display: flex;
+    box-shadow: 2px 3px 10px 3px rgba(160, 160, 160, 0.35);
+    height: 400px;
+    position: relative;
+    width: 400px;
+    perspective: 800px; // has to be here 
+}
+
+.card {
+    $height: 150px;
+    $width: 250px;
+    height: $height;
+    width: $width;
+    position: absolute;
+    
+    // transition: transform 2s ease;
+    transform-style: preserve-3d; // this allows back to show when flipped
+    left: 50%;
+    top: 50%;
+    margin-left: -($width/2);
+    margin-top: -($height/2);
+    border-radius: 10px;
+}
+
+.card > div {
+    background-color: $primary;
+    overflow: hidden;
+    border-radius: 10px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.container:hover {
+    .card{
+        transform: rotateX(180deg);
+    }
+}
+
+.surface svg {
+    position: absolute;
+    bottom: 32px;
+    stroke: #8D8D8D;
+}
+
+// start animation mid way
+// https://css-tricks.com/starting-css-animations-mid-way/
+
+.surface-1 {
+    right: -250px;
+    animation: surface1 4s -2s linear infinite;
+}
+
+.surface-2 {
+    right: -250px;
+    animation: surface1 4s linear infinite;
+}
+
+
+.bike {
+    position: absolute;
+    right: calc(50% - 65px);
+    margin-top: 15%;
+    width: 130px;
+}
+
+.bike {
+    animation: cycle 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite alternate;
+    transform-origin: 50% 100%;
+    stroke: #575757;
+}
+
+
+// back
+
+.back {
+    transform: rotateX(180deg);
+    background-color: red !important;
+}
+
+.helicopter {
+ @extend .bike;
+}
+
+.air {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    svg {
+        position: absolute;
+        right: -400px;
+        stroke: #8D8D8D;
+    }
+}
+
+.air-1 {
+    animation: air 1s linear infinite;
+    top: 50%;
+    animation-delay: -500ms;
+}
+.air-2 {
+    animation: air 1s linear infinite;
+    top: 20%;
+    animation-delay: 0ms;
+}
+.air-3 {
+    animation: air 1s linear infinite;
+    animation-delay: -300ms;
+    top: 30%;
+}
+.air-4 {
+    animation: air 1s linear infinite;
+    animation-delay: 200ms;
+    top: 80%;
+}
+
+.helicopter {
+    animation: fly 2s ease-in-out infinite alternate;
+}
+
+
+ // keyframes
+
+@keyframes cycle {
+    to {
+        transform: scaleY(.95);
+    }
+}
+
+@keyframes fly {
+    from {
+        transform: translateY(20px);
+    }
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes surface1 {
+    to {
+        transform: translateX(-500px)
+    }
+}
+
+@keyframes air {
+    to {
+        right: 100px;
+    }
+}

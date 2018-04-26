@@ -1,0 +1,14 @@
+
+<svg width="135px" height="67px" viewBox="0 0 135 67" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M4,3 L14.8530273,3.64501953 L22.1674805,14.6538086 C57.8400065,14.6538086 84.5053711,14.6538086 102.163574,14.6538086 C128.650879,14.6538086 134.725098,36.2592773 132.380371,44.9370117 C130.81722,50.722168 119.548665,53.4584961 98.574707,53.1459961 C79.4070638,56.0301107 66.5515951,49.7185872 60.0083008,34.2114258 C49.55557,30.5071806 36.0503616,27.7270699 19.4926758,25.8710938 C18.4747721,28.5419922 16.1468099,29.9734701 12.5087891,30.1655273 C8.87076823,30.3575846 8.24625651,26.1879883 10.6352539,17.6567383 L4,3 Z" id="Path-7" stroke="#4C4C4C" stroke-width="4" fill="#FFCE4E"></path>
+        <polyline id="Path-8" stroke="#4C4C4C" stroke-width="4" points="61 64.3603516 123.217323 64.3603516 131.216309 60"></polyline>
+        <path d="M79,53 L79,64.4451946" id="Path-9" stroke="#4C4C4C" stroke-width="4"></path>
+        <path d="M109,54 L109,64.7611091" id="Path-10" stroke="#4C4C4C" stroke-width="4"></path>
+        <path d="M91,16 C96.3251953,31.9661458 102.811198,39.8989258 110.458008,39.7983398 C118.104818,39.6977539 125.307617,38.1614583 132.066406,35.1894531" id="Path-11" stroke="#4C4C4C" stroke-width="4"></path>
+        <path d="M35,3 L127.30845,3" id="Path-12" stroke="#4C4C4C" stroke-width="4"></path>
+        <path d="M84,4 L84,14.7360106" id="Path-13" stroke="#4C4C4C" stroke-width="4"></path>
+    </g>
+</svg>
